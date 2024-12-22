@@ -1,0 +1,84 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+  }
+  
+  .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:5px;
+    flex-wrap:wrap;
+    align-items: center;/* Horizontal scroll if content overflows */
+  }
+  
+  .card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 400px; /* Keep the width consistent */
+    display: flex;
+    flex-direction: row; /* Align content in a row */
+    gap: 15px; /* Space between elements in the card */
+  }
+  
+  .card img {
+    width: 150px; /* Adjust image width */
+    height: 150px; /* Adjust image height */
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+  }
+  
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 15px; /* Add padding for a clean look */
+    text-align: left;
+  }
+  
+  .card h2 {
+    margin: 5px 0;
+    font-size: 1.25rem;
+    font-weight: bold;
+  }
+  
+  .card p {
+    margin: 10px 0;
+    font-size: 0.9rem;
+  }
+  
+  .card button {
+    margin-top: 10px;
+    padding: 8px 16px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the start */
+  }
+  
+  .card button:hover {
+    background-color: #0056b3;
+  }
+  
+  .description {
+    margin: 20px;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+  
+  .description ul {
+    list-style-type: disc;
+    padding-left: 20px;
+  }
+  
+  .description li {
+    margin-bottom: 5px;
+  }
+  

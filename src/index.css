@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+}
+
+/* Custom styles for react-slick */
+.slick-dots {
+  bottom: 25px !important;
+}
+
+.slick-dots li button:before {
+  color: white !important;
+  font-size: 10px !important;
+  opacity: 0.7 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1 !important;
+}
+
+.slick-prev, .slick-next {
+  z-index: 10 !important;
+  width: 40px !important;
+  height: 40px !important;
+}
+
+.slick-prev {
+  left: 20px !important;
+}
+
+.slick-next {
+  right: 20px !important;
+}
+
+.slick-prev:before, .slick-next:before {
+  font-size: 40px !important;
+  opacity: 0.7 !important;
+}
+
+.slick-prev:hover:before, .slick-next:hover:before {
+  opacity: 1 !important;
+}
