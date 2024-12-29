@@ -3,25 +3,25 @@
     border-radius: 12px;
     padding: 1.5rem;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width:100%;
-  }
-  
-  .district-title {
+    width: 100%;
+}
+
+.district-title {
     color: #2c3e50;
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
     display: flex;
     align-items: center;
     gap: 0.5rem;
-  }
-  
-  .info-grid {
+}
+
+.info-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
-  }
-  
-  .info-item {
+}
+
+.info-item {
     background-color: white;
     padding: 1rem;
     border-radius: 8px;
@@ -30,20 +30,59 @@
     align-items: center;
     gap: 0.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-  }
-  
-  .info-item i {
+}
+
+.info-item i {
     font-size: 1.5rem;
     color: #4a5d23;
-  }
-  
-  .info-item .label {
+}
+
+.info-item .label {
     font-size: 0.9rem;
     color: #666;
-  }
-  
-  .info-item .value {
+}
+
+.info-item .value {
     font-size: 1.1rem;
     font-weight: 600;
     color: #2c3e50;
-  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .district-info {
+        padding: 1rem;
+    }
+    
+    .district-title {
+        font-size: 1.3rem;
+    }
+
+    .info-grid {
+        grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    }
+}
+
+@media (max-width: 480px) {
+    .district-title {
+        font-size: 1.1rem;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .info-item {
+        padding: 0.8rem;
+    }
+
+    .info-item i {
+        font-size: 1.2rem;
+    }
+
+    .info-item .label, .info-item .value {
+        font-size: 0.85rem;
+    }
+}
