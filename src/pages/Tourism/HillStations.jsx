@@ -1,8 +1,9 @@
 // src/App.js
 import React, { useState } from 'react';
 import '../../styles/hillstation.css';
-
-const places = [
+function HillStations() {
+  const [visibleDescription, setVisibleDescription] = useState(null);
+   const places = [
   {
     img: "https://th.bing.com/th/id/OIP.2vUgIi-CADNOd2_GWxUiKgHaEO?w=280&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7",
     title: "Araku Valley",
@@ -46,9 +47,6 @@ const places = [
     wiki: "Wikipedia link"
   }
 ];
-
-function HillStations() {
-  const [visibleDescription, setVisibleDescription] = useState(null);
 
   const toggleDescription = (index) => {
     setVisibleDescription(visibleDescription === index ? null : index);
