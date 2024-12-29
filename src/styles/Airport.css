@@ -1,111 +1,149 @@
-/* General Styles */
-.container {
-    height: 100vh; /* Full viewport height */
-    font-family: Arial, sans-serif;
-    padding: 20px;
-    /* Optional: Add background image for full-page display */
-    /* background-image: url('https://your-image-url.jpg'); */
-    /* background-size: cover; */
-    /* background-position: center; */
-  }
-  
-  /* Other styles for card, hero section, main content, etc. remain the same */
-  
-  .card {
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
-  }
-  
-  /* Hero Section */
-  .hero {
-    height: 300px;
-    background-size: cover;
-    background-position: center;
-    position: relative;
-  }
-  
-  .hero-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Full page container for the airport section */
+.airport-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 20px;
+  color: #333;
+}
+
+.airport-header {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #34495e;
+}
+
+.airport-header h1 {
+  font-size: 3rem;
+  color: #2c3e50;
+}
+
+.location {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  margin-top: 10px;
+}
+
+.airport-details {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+  margin-bottom: 40px;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.airport-photo {
+  flex: 1;
+  min-width: 40%;
+}
+
+.airport-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.airport-description {
+  flex: 2;
+  min-width: 50%;
+}
+
+.airport-description h2 {
+  font-size: 2rem;
+  color: #34495e;
+}
+
+.airport-description p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  margin-top: 10px;
+  color: #7f8c8d;
+}
+
+.airport-facts {
+  width: 80%;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #ecf0f1;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.airport-facts h2 {
+  font-size: 2rem;
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.airport-facts ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.airport-facts li {
+  font-size: 1.2rem;
+  color: #34495e;
+  margin-bottom: 12px;
+}
+
+.airport-footer {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.learn-more-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  text-decoration: none; /* Remove underline */
+  display: inline-block;
+}
+
+.learn-more-btn:hover {
+  background-color: #2980b9;
+}
+
+.learn-more-btn:active {
+  background-color: #1f5f82;
+}
+
+@media screen and (max-width: 768px) {
+  .airport-details {
+    flex-direction: column;
     align-items: center;
   }
-  
-  .hero-title {
-    color: #fff;
-    font-size: 2rem;
-    font-weight: bold;
+
+  .airport-photo, .airport-description {
+    min-width: 100%;
     text-align: center;
   }
-  
-  /* Main Content */
-  .content {
-    padding: 20px;
+
+  .airport-facts {
+    width: 90%;
   }
-  
-  .content-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-  }
-  
-  @media (min-width: 768px) {
-    .content-grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  /* Information Section */
-  .info h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-  }
-  
-  .info p {
-    color: #555;
-    line-height: 1.6;
-  }
-  
-  .details {
-    margin-top: 20px;
-  }
-  
-  .detail-item {
-    display: flex;
-    align-items: center;
-    margin-bottom: 10px;
-  }
-  
-  .detail-item .icon {
-    font-size: 1.2rem;
-    margin-right: 10px;
-    color: #007BFF;
-  }
-  
-  .features {
-    list-style: disc;
-    padding-left: 20px;
-    margin-top: 10px;
-  }
-  
-  .features li {
-    color: #555;
-    margin-bottom: 5px;
-  }
-  
-  /* Map Section */
-  .map {
-    height: 400px;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
+}
