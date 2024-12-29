@@ -34,7 +34,7 @@ function App() {
           <Route path="/public-utilities/hospitals" element={<Hospitals />} />
           <Route path="/public-utilities/airport" element={<Airport />} />
           <Route path="/beaches" element={<BeautifulBeaches/>} />
-          <Route path="/famous-for/famous-temples" element={<FamousTemples/>}/>
+          <Route path="/famous-for/famous-temples" element={<Temples/>}/>
         </Routes>
       </div>
     </BrowserRouter>
