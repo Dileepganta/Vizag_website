@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import '../../styles/temples.css';
-
-const temples = [
+function Temples() {
+  const [visibleDescription, setVisibleDescription] = useState(null);
+  const temples = [
   {
     img: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/51/Simhachalam_Temple.jpg/800px-Simhachalam_Temple.jpg",
     title: "Simhachalam Temple",
@@ -45,9 +46,6 @@ const temples = [
     wiki: "https://en.wikipedia.org/wiki/Ramakrishna_Mission_Visakhapatnam"
   }
 ];
-
-function Temples() {
-  const [visibleDescription, setVisibleDescription] = useState(null);
 
   const toggleDescription = (index) => {
     setVisibleDescription(visibleDescription === index ? null : index);
