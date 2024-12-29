@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import '../../styles/Banks.css';
+import '../../styles/banks.css';
 
 function BanksInVizag() {
   const banks = [
