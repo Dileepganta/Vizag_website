@@ -16,8 +16,8 @@
 }
 
 .info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 1fr);
+    display: flex;
+    flex-direction:column;
     gap: 1rem;
     width: 100%;
 }
@@ -60,10 +60,6 @@
         font-size: 1.3rem;
     }
 
-    .info-grid {
-        grid-template-columns: 1fr;
-    }
-
     .info-item {
         width: 100%;
     }
@@ -74,10 +70,6 @@
         font-size: 1.1rem;
         flex-direction: column;
         text-align: center;
-    }
-
-    .info-grid {
-        grid-template-columns: 1fr;
     }
 
     .info-item {
