@@ -30,7 +30,7 @@ function Home() {
         </p>
       </div>
       <ImageCarousel />
-      <div className="main-content">
+      <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
         <div className="left-column">
           <MessageBoard />
         </div>
