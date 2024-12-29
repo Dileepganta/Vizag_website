@@ -31,11 +31,11 @@ function Home() {
       </div>
       <ImageCarousel />
       <div className="flex flex-col items-center gap-3 sm:flex-row sm:justify-center">
-        <div className="left-column">
+        <div className="w-[100%]">
           <MessageBoard />
         </div>
         
-        <div className="right-column">
+        <div className="w-[100%]">
           <DistrictInfo data={districtInfo} />
         </div>
       </div>
