@@ -13,7 +13,7 @@ import Banks from './pages/PublicUtilities/Banks';
 import Hospitals from './pages/PublicUtilities/Hospitals';
 import Airport from './pages/PublicUtilities/Airport';
 import BeautifulBeaches from './pages/Tourism/BeautifulBeaches';
-import { FamousTemples } from './pages/FamousFor/Famoustemples';
+import {Temples } from './pages/FamousFor/Famoustemples.jsx';
 
 
 function App() {
