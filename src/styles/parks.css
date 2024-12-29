@@ -1,61 +1,91 @@
 .grid {
-  padding-top:50px;
-   display:grid;
-   grid-template-columns: repeat(4,1fr);
-   gap:10px; /* Allow horizontal scrolling for overflow */
+  padding-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columns by default */
+  gap: 10px;
+}
+
+.card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  width: 100%;
+  max-width: 380px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.person-photo {
+  width: 100%;
+  height: 450px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+  display: block;
+  margin: 0 auto;
+}
+
+.person-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin: 10px 0 5px;
+  text-align: center;
+}
+
+.mb-1 {
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.know-more {
+  display: inline-block;
+  padding: 10px 14px;
+  background-color: #38b2ac;
+  color: white;
+  border-radius: 0.25rem;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 10px auto 0;
+  text-align: center;
+}
+
+.know-more:hover {
+  background-color: #319795;
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr); /* 3 columns for large tablets */
+  }
+}
+
+@media (max-width: 900px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns for tablets */
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: 1fr; /* 1 column for mobile screens */
+  }
+
+  .person-photo {
+    height: 350px; /* Adjust photo height for mobile */
+  }
+
+  .person-name {
+    font-size: 1.25rem;
   }
   
   .card {
-    background-color: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 16px;
-    width:100%; /* Set a fixed width for larger cards */
-    max-width: 380px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* Center content within the card */
-    transition: transform 0.3s ease;
+    padding: 12px;
   }
-  
-  .card:hover {
-    transform: scale(1.05);
-  }
-  
-  .person-photo {
-    width: 100%;
-    height: 450px; /* Increased image height */
-    border-radius: 0.5rem;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto; /* Center the image within the card */
-  }
-  
-  .person-name {
-    font-size: 1.5rem; /* Slightly larger font size */
-    font-weight: bold;
-    margin: 10px 0 5px;
-    text-align: center; /* Center the name text */
-  }
-  
-  .mb-1 {
-    margin-bottom: 0.5rem;
-    text-align: center; /* Center the review and location texts */
-  }
-  
-  .know-more {
-    display: inline-block;
-    padding: 10px 14px;
-    background-color: #38b2ac;
-    color: white;
-    border-radius: 0.25rem;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin: 10px auto 0; /* Center the button */
-    text-align: center;
-  }
-  
-  .know-more:hover {
-    background-color: #319795;
-  }
-  
+}
